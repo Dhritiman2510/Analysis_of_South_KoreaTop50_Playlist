@@ -157,7 +157,7 @@ The pipeline performs basic integrity checks on load:
 ### Clone Repository
 
 ```bash
-git clone <repository_url>
+git clone https://github.com/Dhritiman-M/Analysis_of_South_KoreaTop50_Playlist.git
 cd Analysis of South KoreaTop 50 Playlists
 ```
 
