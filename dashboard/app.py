@@ -28,7 +28,7 @@ import plotly.express as px
 import plotly.graph_objects as go
 import streamlit as st
 
-from src.design import(
+from design import(
     CSS,ACCENT,ACCENT2,ACCENT3,PLOTLY_TEMPLATE
 )
 
