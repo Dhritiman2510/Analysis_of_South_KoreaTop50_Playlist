@@ -28,8 +28,18 @@ K-Pulse/
 │   ├── __init__.py
 │   └── app.py              
 ├── data/
-│   └── Atlantic_South_Korea.csv  
-├── main.py                 
+│   └── Atlantic_South_Korea.csv 
+├── docs/
+│   └──screenshots/
+│      └── 01_fandom_leaderboard.png
+│      └── 02_timeline.png
+│       └── 03_momentum.png
+│      └── 04_attributes.png
+│      └── 05_map.png
+│      └── 06_champions.png
+│      └── 07_summary.png
+│
+├── main.py       ---------> Entry point of the project            
 ├── README.md
 ├── requirements.txt
 └── .gitignore
@@ -86,36 +96,36 @@ K-Pulse/
 
 ## Dashboard Modules
 
-### 01 · Fandom Intensity Leaderboard
+### 1 · Fandom Intensity Leaderboard
 - Ranked table of all tracks by **Fandom Score**
 - Columns: Song, Artist, Album Type, Fandom, Re-Entries, Momentum, Peak Rank, Days On, Avg Retention
 - Filterable by album type, explicit flag, min re-entries, search
 
-### 02 · Re-Entry Timeline (Per Track)
+### 2 · Re-Entry Timeline (Per Track)
 - Interactive rank-over-time chart with **visual breaks at chart exits**
 - Sidebar track selector with album art, metadata, and all computed metrics
 - Hover for exact date + rank
 
-### 03 · Momentum Spike Detection
+### 3 · Momentum Spike Detection
 - Horizontal bar chart: Top 15 tracks by **Momentum Score**
 - Identifies sharpest comebacks (rank recovery + popularity surge)
 
-### 04 · Content Attributes vs Momentum
+### 4 · Content Attributes vs Momentum
 | Panel | Insight |
 |-------|---------|
 | **Single vs Album** | Grouped bar: mean momentum & retention by album type |
 | **Explicit vs Clean** | Grouped bar: mean momentum & track count |
 | **Duration vs Momentum** | Scatter: song duration (min) vs momentum, sized by days on chart, colored by album type |
 
-### 05 · Re-Entry × Momentum Map
+### 5 · Re-Entry × Momentum Map
 - Scatter: X = Re-entry count, Y = Momentum, Size = Days on Chart, Color = Album Type
 - Quadrant analysis: high-re-entry + high-momentum = fandom-driven comebacks
 
-### 06 · Re-Entry Champions
+### 6 · Re-Entry Champions
 - Top 12 tracks with ≥1 re-entry, displayed as cards with cover art
 - Quick visual identification of "comeback kings"
 
-### 07 · Executive Summary
+### 7 · Executive Summary
 - Auto-generated strategic takeaways:
   - % of catalog that re-enters
   - Album vs single momentum comparison
@@ -154,24 +164,24 @@ The pipeline performs basic integrity checks on load:
 
 ## Installation
 
-### Clone Repository
+- Clone Repository
 
-```bash
-git clone https://github.com/Dhritiman-M/Analysis_of_South_KoreaTop50_Playlist.git
-cd Analysis of South KoreaTop 50 Playlists
-```
+  ```bash
+  git clone https://github.com/Dhritiman-M/Analysis_of_South_KoreaTop50_Playlist.git
+  cd Analysis of South KoreaTop 50 Playlists
+  ```
 
-### Install Dependencies
+- Install Dependencies
 
-```bash
-pip install -r requirements.txt
-```
-
-### Launch Dashboard
-
-```bash
-streamlit run dashboard/streamlit_app.py
-```
+  ```bash
+  pip install -r requirements.txt
+  ```
+- Launch Dashboard
+  ```bash
+  streamlit run dashboard/streamlit_app.py
+  (or)
+  python main.py
+  ```
 ---
 
 ## Dashboard Preview
@@ -186,7 +196,6 @@ streamlit run dashboard/streamlit_app.py
 | Re-Entry Champions | ![Champions](docs/screenshots/06_champions.png) |
 | Executive Summary | ![Summary](docs/screenshots/07_summary.png) |
 
-> Add screenshots to `docs/screenshots/` after running the dashboard.
 
 ---
 
@@ -212,17 +221,22 @@ streamlit run dashboard/streamlit_app.py
 
 ## Future Enhancements
 
-- [ ] **Predictive re-entry model** (Prophet / survival analysis)
-- [ ] **Artist-level aggregation** (catalog-wide fandom health)
-- [ ] **External signal integration** (YouTube views, TikTok trends, music show wins)
-- [ ] **Automated alerting** on momentum spikes / re-entry detection
-- [ ] **Multi-market comparison** (KR vs JP vs US charts)
-- [ ] **Export to Notion / Slack** for stakeholder sharing
+- Predictive re-entry model (Prophet / survival analysis)
+- Artist-level aggregation (catalog-wide fandom health)
+- External signal integration (YouTube views, TikTok trends, music show wins)
+- Automated alerting on momentum spikes / re-entry detection
+- Multi-market comparison (KR vs JP vs US charts)
+- Export to Notion / Slack for stakeholder sharing
 
 ---
 
-## Author
+For inquiries or assistance, reach out to the project contributors:
 
-**Machine Learning Internship Project — Unified Mentor**  
-Project 2: Analysis of South Korea Top 50 Playlist  
-Dashboard: **K-Pulse** — Comeback Momentum, Chart Re-Entry & Fandom Intensity
+- Author : Dhritiman Modak
+- GitHub: [github.com/Dhritiman-M](https://github.com/Dhritiman-M)
+- Email: dhritimanmodak72@gmail.com
+- Project By Unified Mentor
+
+---
+
+## ⭐ If you found this project useful, consider giving it a star!
